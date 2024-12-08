@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TokoRetail - Features</title>
+    <link rel="stylesheet" href="../src/styles.css" />
+  </head>
+  <body>
+    <header>
+      <section id="navbar">
+        <a href="/toko-retail">
+          <section id="good">
+            <h1 class="title">TokoRetail</h1>
+            <p>Retail Shop, made with Go, Fiber, MySQL</p>
+          </section></a
+        >
+        <ul id="nav-links">
+          <li><a href="/toko-retail/features">Features</a></li>
+          <li>|</li>
+          <li>
+            <a
+              href="http://github.com/Pande17/toko-retail"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Github Repo</a
+            >
+          </li>
+        </ul>
+      </section>
+    </header>
+    <section class="okay">
+      <h2>Features</h2>
+      <ol>
+        <li>
+          <h3>Product Management</h3>
+          <p>
+            Easily manage and organize your product catalog. Add new products,
+            update existing ones, and manage stock levels to ensure you're
+            always prepared for customer demands. The system supports detailed
+            product descriptions, pricing, and category assignments.
+          </p>
+        </li>
+        <li>
+          <h3>Discount Code Management</h3>
+          <p>
+            Create and manage discount codes to offer promotions to your
+            customers. Set up custom discount rules (e.g., percentage off, fixed
+            amount off) for specific products or categories, and track which
+            codes have been used. This feature helps boost customer engagement
+            and increase sales.
+          </p>
+        </li>
+        <li>
+          <h3>Inventory Management</h3>
+          <p>
+            Keep track of your stock levels and make adjustments as needed. The
+            system notifies you when stocks are low, ensuring that you never run
+            out of popular items. You can also update inventory based on stock
+            movements (e.g., sales, returns, or restocking).
+          </p>
+        </li>
+        <li>
+          <h3>Role-Based Access</h3>
+          <p>
+            The system supports multiple user roles, allowing for different
+            levels of access to various features. Store admins can manage
+            product data, sales, and inventory, while sales associates may only
+            handle customer transactions and basic inventory management.
+          </p>
+        </li>
+        <li>
+          <h3>Order History</h3>
+          <p>
+            Customers can view their order history, including order details and
+            shipping status. This feature enhances customer satisfaction by
+            providing easy access to previous purchases, helping them track past
+            orders or repeat purchases.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <hr />
+
+    <section class="okay">
+      <h2>Tech Stack</h2>
+      <ul>
+        <li><strong>Backend:</strong> Go (Golang)</li>
+        <li><strong>Web Framework:</strong> Fiber</li>
+        <li><strong>Database:</strong> MySQL</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section class="okay">
+      <h1>API Endpoints Documentation</h1>
+      <p>List of available endpoints for the URL Shortener Application.</p>
+    </section>
+
+    <section class="okay">
+      <h2>Barang Routes</h2>
+      <table border="1" cellspacing="0" cellpadding="5" class="box">
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Endpoint</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GET</td>
+            <td>/barang</td>
+            <td>Fetch all barang (products)</td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>/barang/:id</td>
+            <td>Fetch a specific barang by ID</td>
+          </tr>
+          <tr>
+            <td>POST</td>
+            <td>/barang</td>
+            <td>Create a new barang</td>
+          </tr>
+          <tr>
+            <td>PUT</td>
+            <td>/barang/:id</td>
+            <td>Update a barang</td>
+          </tr>
+          <tr>
+            <td>PUT</td>
+            <td>/barang/stok/:id</td>
+            <td>Update stock of a barang</td>
+          </tr>
+          <tr>
+            <td>DELETE</td>
+            <td>/barang/:id</td>
+            <td>Delete a barang</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="okay">
+      <h2>Penjualan Routes</h2>
+      <table border="1" cellspacing="0" cellpadding="5" class="box">
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Endpoint</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GET</td>
+            <td>/admin/penjualan</td>
+            <td>Fetch all penjualan (sales) records</td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>/admin/penjualan/:id</td>
+            <td>Fetch a specific penjualan by ID</td>
+          </tr>
+          <tr>
+            <td>POST</td>
+            <td>/penjualan</td>
+            <td>Insert new penjualan data</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="okay">
+      <h2>Kode Diskon Routes</h2>
+      <table border="1" cellspacing="0" cellpadding="5" class="box">
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Endpoint</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GET</td>
+            <td>/admin/kode-diskon</td>
+            <td>Fetch all kode diskon (discount codes)</td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>/admin/kode-diskon/:id</td>
+            <td>Fetch a specific kode diskon by ID</td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>/kode-diskon/get-by-code</td>
+            <td>Fetch a kode diskon by its code</td>
+          </tr>
+          <tr>
+            <td>POST</td>
+            <td>/kode-diskon</td>
+            <td>Create a new kode diskon</td>
+          </tr>
+          <tr>
+            <td>PUT</td>
+            <td>/admin/kode-diskon/:id</td>
+            <td>Update a kode diskon</td>
+          </tr>
+          <tr>
+            <td>DELETE</td>
+            <td>/admin/kode-diskon/:id</td>
+            <td>Delete a kode diskon</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr />
+
+    <section class="okay">
+      <h2>Installation and Setup</h2>
+      <ol>
+        <li>
+          Clone the repository:
+          <code
+            >git clone
+            <a href="https://github.com/Pande17/toko-retail"
+              >https://github.com/Pande17/toko-retail.git</a
+            ></code
+          >
+        </li>
+        <li>Navigate to the directory: <code>cd shortlink</code></li>
+        <li>Install dependencies: <code>go mod tidy</code></li>
+        <li>
+          Create a <code>.env</code> file with the necessary environment
+          variables.
+        </li>
+        <li>Run the application: <code>go run main.go</code></li>
+        <li>Access the application at <code>http://localhost:3000</code></li>
+      </ol>
+    </section>
+
+    <hr />
+
+    <section class="okay">
+      <h2>Conclusion</h2>
+      <p>
+        The URL Shortener application provides all the tools necessary to
+        shorten, manage, and analyze URLs effectively. It is fast, secure, and
+        scalable, making it ideal for modern web applications.
+      </p>
+    </section>
+  </body>
+</html>
